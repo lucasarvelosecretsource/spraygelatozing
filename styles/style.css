@@ -1,0 +1,81 @@
+@import "normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Rubik+Glitch&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: mediumblue;
+  color: #fffafa;
+}
+
+.navbar a {
+  color: #fffafa;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  font-size: 2.25rem;
+  font-family: "Rubik Glitch", cursive;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 0.8rem;
+  font-size: 1.125rem;
+}
+
+.navbar-menu li {
+  list-style: none;
+  padding: 4px 14px;
+}
+
+.navbar-menu li:hover {
+  background-color: skyblue;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+/* CHECKBOX HACK */
+input[type="checkbox"] {
+  display: none;
+}
+/*HAMBURGER MENU*/
+.navbar-hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+@media (max-width: 640px) {
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    background-color: mediumblue;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .navbar-menu li:hover {
+    display: inline-block;
+  }
+
+  .navbar-menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type="checkbox"]:checked ~ .navbar-menu {
+    display: block;
+    margin-top: 15px;
+  }
+  .navbar-hamburger {
+    display: block;
+  }
+}
