@@ -249,7 +249,7 @@ input[type="checkbox"] {
 
 @media (min-width: 2400px) {
   .hero-about-us::before {
-    background-image: url(../img/webp/hero-about-us-6000.webp);
+    background-image: url(../img/webp/hero-about-us-5184.webp);
   }
 }
 
@@ -267,6 +267,6 @@ input[type="checkbox"] {
 
 @media (min-width: 2400px) {
   .hero-testimonies::before {
-    background-image: url(../img/webp/hero-testimonies-6000.webp);
+    background-image: url(../img/webp/hero-testimonies-5762.webp);
   }
 }
