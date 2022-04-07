@@ -5,13 +5,23 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
   background-color: rgba(0, 0, 0, 0.2);
   color: #fffafa;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
 }
 
 .navbar a {
@@ -22,12 +32,15 @@ body {
 .navbar-logo {
   font-size: 2.25rem;
   font-family: "Rubik Glitch", cursive;
+  margin-left: 10px;
 }
 
 .navbar-menu {
   display: flex;
   gap: 0.8rem;
   font-size: 1.125rem;
+  padding: 5px;
+  margin: 5px;
 }
 
 .navbar-menu li {
@@ -50,29 +63,68 @@ input[type="checkbox"] {
   display: none;
   font-size: 24px;
   user-select: none;
+  margin: 10px;
 }
 
-header {
+.hero {
   width: 100%;
-  height: 55vw;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
-.hero-img {
+.hero::before {
+  background-size: cover;
+  content: "";
+  display: block;
   position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
 }
 
 .hero-text {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  min-width: 100%;
+  min-height: 12em;
+  position: relative;
   text-align: center;
+  vertical-align: middle;
   font-size: 5vw;
   color: #fffafa;
-  margin-top: 33vw;
   font-style: oblique;
   text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
     1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.article-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em 1em;
+  grid-template-areas:
+    "main pros"
+    "main cons";
+}
+
+.article-main {
+  grid-area: main;
+}
+.article-index-pros {
+  grid-area: pros;
+}
+.article-index-cons {
+  grid-area: cons;
 }
 
 @media (max-width: 640px) {
@@ -106,11 +158,78 @@ header {
 @media (max-width: 400px) {
   .navbar {
     flex-direction: column;
+    width: 100%;
   }
 
   .navbar-links {
     width: 100%;
     text-align: right;
     padding-right: 40px;
+  }
+}
+
+.hero-index::before {
+  background-image: url(../img/webp/hero-640.webp);
+}
+
+.hero-about-us::before {
+  background-image: url(../img/webp/hero-about-us-640.webp);
+}
+
+.hero-testimonies::before {
+  background-image: url(../img/webp/hero-testimonies-640.webp);
+}
+
+@media (min-width: 640px) {
+  .hero-index::before {
+    background-image: url(../img/webp/hero-1920.webp);
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero-index::before {
+    background-image: url(../img/webp/hero-2400.webp);
+  }
+}
+
+@media (min-width: 2400px) {
+  .hero-index::before {
+    background-image: url(../img/webp/hero-6000.webp);
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-about-us::before {
+    background-image: url(../img/webp/hero-about-us-1920.webp);
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero-about-us::before {
+    background-image: url(../img/webp/hero-about-us-2400.webp);
+  }
+}
+
+@media (min-width: 2400px) {
+  .hero-about-us::before {
+    background-image: url(../img/webp/hero-about-us-6000.webp);
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-testimonies::before {
+    background-image: url(../img/webp/hero-testimonies-1920.webp);
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero-testimonies::before {
+    background-image: url(../img/webp/hero-testimonies-2400.webp);
+  }
+}
+
+@media (min-width: 2400px) {
+  .hero-testimonies::before {
+    background-image: url(../img/webp/hero-testimonies-6000.webp);
   }
 }
