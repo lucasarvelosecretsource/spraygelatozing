@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html itemscope itemtype="http://schema.org/WebPage" lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -81,8 +81,8 @@
       </div>
     </header>
     <main>
-      <h1>Bienvenido a nuestro laboratorio</h1>
       <article class="article-about">
+        <h1>Bienvenido a nuestro laboratorio</h1>
         <section class="article-main">
           <h2>Conoce Style King</h2>
           <p>
@@ -104,7 +104,7 @@
             que dotaran de una habilidad a todo aquel que lo use.
           </p>
         </section>
-        <section class="article-img">
+        <div class="article-img">
           <img
             src="./img/webp/about-us-640.webp"
             srcset="
@@ -112,9 +112,10 @@
               ./img/webp/about-us-2400.webp 1024w,
               ./img/webp/about-us-3997.webp 2400w
             "
+            sizes="50vw"
             alt="equipo trabajando"
           />
-        </section>
+        </div>
       </article>
     </main>
     <footer></footer>
