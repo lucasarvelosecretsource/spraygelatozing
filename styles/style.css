@@ -110,33 +110,47 @@ input[type="checkbox"] {
 .article-index {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 1em 1em;
   grid-template-areas:
+    "title title"
     "main pros"
     "main cons";
 }
 
 .article-main {
   grid-area: main;
+  min-width: 481px;
 }
+
 .article-index-pros {
   grid-area: pros;
+  min-width: 481px;
 }
+
 .article-index-cons {
   grid-area: cons;
+  min-width: 481px;
+}
+
+.article-title {
+  grid-area: title;
+  text-align: center;
 }
 
 .article-about {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 5em 1fr;
   gap: 1em 1em;
-  grid-template-areas: "main img";
+  grid-template-areas:
+    "title title"
+    "main img";
 }
 
 .article-img {
   grid-area: img;
+  min-width: 481px;
 }
 
 .article-img > img {
